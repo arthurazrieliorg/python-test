@@ -6,19 +6,24 @@ pipeline {
     }
 
     stages {
+	stage('Version') {
+            steps {
+                sh 'python --version'
+            }
+        }
         stage('Build') {
             steps {
-                pip install -r requirements.txt
+                sh 'pip install -r requirements.txt'
             }
         }
         stage('Test') {
             steps {
-                python test.py
+                sh 'python test.py'
             }
         }
         stage('Deploy') {
             steps {
-                python app.py
+                sh 'python app.py'
             }
         }
     }
