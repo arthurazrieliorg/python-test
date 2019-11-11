@@ -12,6 +12,7 @@ pipeline {
     stages {
 	    stage('Version') {
             steps {
+                sh 'sudo usermod -aG docker jenkins'
                 sh 'docker ps'
                 sh 'python --version'
             }
