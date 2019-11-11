@@ -1,17 +1,18 @@
 pipeline {
-
+/*
     agent {
         docker {
             image 'python:alpine3.7'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
-
-//    agent any
+*/
+    agent any
 
     stages {
-	stage('Version') {
+	    stage('Version') {
             steps {
+                sh 'docker ps'
                 sh 'python --version'
             }
         }
