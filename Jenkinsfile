@@ -1,19 +1,17 @@
 pipeline {
-
+/*
     agent {
         node {
           label 'docker-jenkins-slave'
         }
     }
-
-/*
+*/
     agent {
         docker {
             image 'python:alpine3.7'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
-*/
 //    agent any
 
     stages {
