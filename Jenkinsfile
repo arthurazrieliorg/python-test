@@ -1,8 +1,11 @@
 pipeline {
 
-    node {
-      label 'docker-jenkins-slave'
+    agent {
+        node {
+          label 'docker-jenkins-slave'
+        }
     }
+
 /*
     agent {
         docker {
