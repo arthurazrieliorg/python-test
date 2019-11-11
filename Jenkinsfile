@@ -13,6 +13,8 @@ pipeline {
 	    stage('Version') {
             steps {
                 sh 'whoami'
+                sh 'echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories'
+                sh 'apk --no-cache add shadow'
                 sh 'usermod -aG docker jenkins'
                 sh 'docker ps'
                 sh 'python --version'
