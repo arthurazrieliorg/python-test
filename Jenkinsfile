@@ -24,7 +24,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'pip install --upgrade pip'
+                sh 'apt-get update && apt-get install -y \
+                        php5-mcrypt \
+                        python-pip'
                 sh 'pip --no-cache-dir install -r requirements.txt'
             }
         }
