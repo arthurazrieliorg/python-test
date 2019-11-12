@@ -24,6 +24,8 @@ pipeline {
         }
         stage('Build') {
             steps {
+		sh 'whoami'
+		sh 'cat /etc/passwd'
                 sh 'sudo apt-get update && apt-get install -y \
                         php5-mcrypt \
                         python-pip'
