@@ -1,7 +1,8 @@
 pipeline {
     agent {
         node {
-          label 'slaveslave'
+         // label 'slaveslave'
+	    label 'margarita'
         }
     }
 /*
