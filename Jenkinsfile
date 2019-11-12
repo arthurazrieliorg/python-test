@@ -24,7 +24,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-		sh 'su root'
 		sh 'whoami; echo $JENKINS_USER'
 		
 		sh 'cat /etc/sysconfig/jenkins | grep JENKINS_USER'
