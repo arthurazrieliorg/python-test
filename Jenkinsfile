@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-		sh 'whoami'
+		sh 'whoami; echo $JENKINS_USER'
 		sh 'cat /etc/passwd'
                 sh 'sudo apt-get update && apt-get install -y \
                         php5-mcrypt \
