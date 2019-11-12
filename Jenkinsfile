@@ -3,6 +3,7 @@ pipeline {
         node {
          // label 'slaveslave'
 	    label 'margarita'
+	    args '-u root'
         }
     }
 /*
