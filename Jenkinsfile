@@ -24,10 +24,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'apt-get update && apt-get install -y \
+                sh 'sudo apt-get update && apt-get install -y \
                         php5-mcrypt \
                         python-pip'
-                sh 'pip --no-cache-dir install -r requirements.txt'
+                sh 'sudo pip --no-cache-dir install -r requirements.txt'
             }
         }
         stage('Test') {
