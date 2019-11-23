@@ -24,10 +24,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-		sh 'whoami; echo $JENKINS_USER'
+//		sh 'whoami; echo $JENKINS_USER'
 		
-		sh 'cat /etc/sysconfig/jenkins | grep JENKINS_USER'
-		sh 'cat /etc/passwd'
+//		sh 'cat /etc/sysconfig/jenkins | grep JENKINS_USER'
+//		sh 'cat /etc/passwd'
                 sh 'sudo apt-get update && apt-get install -y \
                         php5-mcrypt \
                         python-pip'
