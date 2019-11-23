@@ -28,9 +28,7 @@ pipeline {
 		
 //		sh 'cat /etc/sysconfig/jenkins | grep JENKINS_USER'
 //		sh 'cat /etc/passwd'
-                sh 'apt-get update && apt-get install -y \
-                        php5-mcrypt \
-                        python-pip'
+                sh 'apt-get update && apt-get install -y python-pip'
                 sh 'pip --no-cache-dir install -r requirements.txt'
             }
         }
